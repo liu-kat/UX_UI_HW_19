@@ -1,0 +1,172 @@
+@media only screen and (max-width: 600px) {
+  body .flexContainer {
+    flex-direction: column;
+  }
+  body .flexChild {
+    width: 100%;
+  }
+  body .myWork {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  body .myWork .workGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr 4fr);
+    grid-template-areas:
+      "projectIcon1"
+      "projectContent1"
+      "projectIcon2"
+      "projectContent2";
+  }
+}
+
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.gridContainer {
+  display: grid;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  height: auto;
+  width: 100vw;
+  margin: 0;
+  flex-direction: column;
+}
+
+header {
+  background-color: #f1b150;
+  padding: 15px;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+}
+
+header ul {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  margin-left: auto;
+  list-style-type: none;
+}
+
+header li {
+  padding: 0px 5px;
+}
+
+.heroImg {
+  text-align: center;
+  background-color: #ebebeb;
+  padding: 100px 25px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ============================================= MY SKILLS */
+.mySkills {
+  background-color: #ebebeb;
+  padding-top: 1%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 5%;
+  flex-direction: column;
+}
+
+.mySkillsList {
+  justify-content: space-around;
+}
+
+.mySkills h1 {
+  text-align: center;
+}
+
+.mySkillsItem {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 2.5%;
+  outline: 1px solid black;
+  align-content: center;
+  text-align: center;
+  padding: 5%;
+}
+
+/* ============================================= MY WORK */
+.myWork {
+  background-color: #ebebeb;
+  padding-top: 1%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 5%;
+  flex-direction: column;
+}
+.myWork h1 {
+  text-align: center;
+}
+.workGrid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  /* CHANGE THE 2 BELOW IF I ADD MORE PROJECTS */
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "projectIcon1 projectContent1"
+    "projectIcon2 projectContent2";
+  column-gap: 15px;
+  row-gap: 15px;
+}
+.workGrid .projectContent {
+  outline: 1px solid black;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.workGrid .projectContent1 {
+  grid-area: projectContent1;
+}
+.workGrid .projectContent2 {
+  grid-area: projectContent2;
+}
+.workGrid .projectIcon {
+  outline: 1px solid black;
+}
+.workGrid .projectIcon1 {
+  grid-area: projectIcon1;
+}
+.workGrid .projectIcon2 {
+  grid-area: projectIcon2;
+}
+
+/* ============================================= FOOTERS */
+button {
+  padding: 15px;
+  background-color: #373738;
+  color: white;
+  font-size: 15px;
+  border-radius: 4px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #373738;
+  padding: 5px;
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0px 7px;
+}
